@@ -10,4 +10,4 @@ workflows:
     jobs:
       - masonite/trigger:
           repo: masoniteframework/validation
-          branch: "2.2"
+          branch: master
