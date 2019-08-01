@@ -13,13 +13,22 @@ orbs:
           - image: masoniteproject/orb:latest 
     jobs:
       build:
+        parameters:
+          repo:
+            type: string
+            default: 'masoniteframework/api'
+          branch:
+            type: string
+            default: master
         executor: masonite-orb
         steps:
         - run:
-            command: python /trigger_build.py --repo masoniteframework/api --branch 2.2
+            command: python /trigger_build.py --repo << parameters.repo >> --branch << parameters.branch >>
      
 workflows:
   version: 2
   run_worflow:
     jobs:
-    - masonite-orb/build
+      - masonite-orb/build:
+          repo: masoniteframework/api
+          branch: 2.2
