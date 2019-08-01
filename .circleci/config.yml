@@ -9,5 +9,6 @@ workflows:
   run_worflow:
     jobs:
       - masonite/trigger:
+          name: "Masonite Validation"
           repo: masoniteframework/validation
           branch: master
