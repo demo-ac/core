@@ -2,33 +2,12 @@
 version: 2.1
 
 orbs:
-  masonite-orb:
-    executors:
-      masonite-orb:
-        parameters:
-          CIRCLE_TOKEN: 
-            type: string
-            default: $CIRCLE_TOKEN
-        docker:
-          - image: masoniteproject/orb:latest 
-    jobs:
-      build:
-        parameters:
-          repo:
-            type: string
-            default: 'masoniteframework/api'
-          branch:
-            type: string
-            default: master
-        executor: masonite-orb
-        steps:
-        - run:
-            command: python /trigger_build.py --repo << parameters.repo >> --branch << parameters.branch >>
-     
+  masonite: masonite/trigger@dev:latest
+
 workflows:
   version: 2
   run_worflow:
     jobs:
-      - masonite-orb/build:
+      - masonite/trigger:
           repo: masoniteframework/api
-          branch: "2.2"
+          branch: 2.2
