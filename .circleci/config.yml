@@ -9,5 +9,5 @@ workflows:
   run_worflow:
     jobs:
       - masonite/trigger:
-          repo: masoniteframework/api
+          repo: masoniteframework/validation
           branch: 2.2
