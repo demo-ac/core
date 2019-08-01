@@ -31,4 +31,4 @@ workflows:
     jobs:
       - masonite-orb/build:
           repo: masoniteframework/api
-          branch: 2.2
+          branch: "2.2"
