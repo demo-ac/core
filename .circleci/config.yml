@@ -17,5 +17,5 @@ workflows:
           username: josephmancuso
           filters:
             tags:
-              only: /^v[\w\.\-]+/ # Matches v2.2, v2.2-dev
+              only: /^v.*/ # Matches v2.2, v2.2-dev
 
