@@ -15,3 +15,7 @@ workflows:
           environment: "MASONITE_DEPENDENT_BRANCH=$CIRCLE_BRANCH"
       - masonite/deploy:
           username: josephmancuso
+          filter:
+            tags:
+              only: /^v[\w\.\-]+/ # Matches v2.2, v2.2-dev
+
