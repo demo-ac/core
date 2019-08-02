@@ -12,3 +12,5 @@ workflows:
           name: "Masonite Validation"
           repo: masoniteframework/validation
           branch: master
+      - masonite/deploy:
+          name: "PYPI Deployment"
