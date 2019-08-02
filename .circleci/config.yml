@@ -13,4 +13,5 @@ workflows:
           repo: masoniteframework/validation
           branch: master
       - masonite/deploy:
-          name: "PYPI Deployment"
+          username: Joe
+          password: secret
