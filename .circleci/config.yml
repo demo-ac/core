@@ -17,5 +17,7 @@ workflows:
           username: josephmancuso
           filters:
             tags:
-              only: /^v.*/ # Matches v2.2, v2.2-dev
+              only: /^v.*/
+            branches:
+              ignore: /.*/ # Matches v2.2, v2.2-dev
 
