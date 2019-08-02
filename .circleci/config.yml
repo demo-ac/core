@@ -13,5 +13,4 @@ workflows:
           repo: masoniteframework/validation
           branch: master
       - masonite/deploy: 
-          username: Joe
-          password: secret
+          username: josephmancuso
