@@ -12,5 +12,6 @@ workflows:
           name: "Masonite Validation"
           repo: masoniteframework/validation
           branch: master
-      - masonite/deploy: 
+          environment: "MASONITE_DEPENDENT_BRANCH=$CIRCLE_BRANCH"
+      - masonite/deploy:
           username: josephmancuso
